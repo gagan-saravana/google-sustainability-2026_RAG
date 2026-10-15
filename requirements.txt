@@ -6,7 +6,5 @@ tenacity>=8.2            # retry/backoff for free-tier rate limits
 
 nicegui>=3.7
 
-# --- Dev ---
-pytest>=8.0
 
 
