@@ -1,0 +1,12 @@
+
+google-genai>=1.0        # Gemini API: embeddings now, answer synthesis later
+chromadb>=1.0            # vector store (persistent, local)
+python-dotenv>=1.0       # loads GEMINI_API_KEY from .env
+tenacity>=8.2            # retry/backoff for free-tier rate limits
+
+nicegui>=3.7
+
+# --- Dev ---
+pytest>=8.0
+
+
