@@ -40,8 +40,9 @@ def _embed_texts(texts: list[str]) -> list[list[float]]:
 
 def embed_documents(chunks: list[Chunk]) -> list[list[float]]:
     """Embed ONE batch of chunks (the caller decides batching and persists progress).
-    gemini-embedding-2 L2-normalises truncated dimensions itself, so no manual
-    normalisation is needed (that is only required for gemini-embedding-001)."""
+    gemini-embedding-2 L2-normalises truncated dimensions itself (scales each
+    vector to unit Euclidean length, so its squared components sum to 1), so no
+    manual normalisation is needed (that is only required for gemini-embedding-001)."""
     return _embed_texts([format_document(c) for c in chunks])
 
 
