@@ -72,6 +72,8 @@ Google sustainability report (PDF)
 └── chroma_db/                    # Generated local vector index
 ```
 
+RAGAS had installation errors (seemingly not forwards-compatible with Python 3.14), so I added a RAGAS-guide.md file which were my notes from the official docs - to develop intuition.
+
 ## Tech stack
 
 | Technology | Role |

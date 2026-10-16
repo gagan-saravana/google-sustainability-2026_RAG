@@ -1,19 +1,5 @@
-"""
-app.py: NiceGUI chat interface for the Google 2026 Environmental Report RAG demo.
+#NiceGUI chat interface
 
-    python app.py            # then open http://localhost:8080
-
-Design decisions:
-* No accounts. NiceGUI's signed session cookie gives each browser an anonymous id
-  (app.storage.browser['id']); limits and history live in server memory (src/limits.py).
-* 3 questions per browser + a global daily cap (the real protection for the free Gemini quota).
-  A failed model call refunds the question; double-submits are blocked.
-* History = those few exchanges only. Follow-ups are "condensed" into standalone
-  questions (src/condense.py) before retrieval. A page refresh restores the chat.
-* Blocking work (Gemini + Chroma calls) runs via run.io_bound so the UI never freezes.
-* LLM output is untrusted text: it is HTML-escaped before markdown rendering
-  (and NiceGUI >= 3.7 sanitises ui.markdown as well).
-"""
 from __future__ import annotations
 
 import asyncio
