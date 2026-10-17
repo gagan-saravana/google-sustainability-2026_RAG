@@ -269,7 +269,6 @@ def main() -> None:
 
     ui.run(
         title="Google 2026 Environmental Report Q&A",
-        favicon="🌱",
         dark=True,
         reload=False,
         port=int(os.getenv("PORT", "8080")),

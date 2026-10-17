@@ -1,5 +1,7 @@
 # Google 2026 Sustainability Report Q&A
 
+![alt text](RAG.png)
+
 A browser-based question-answering demo for Google's 2026 sustainability
 report. It retrieves relevant report passages and uses Gemini to produce
 grounded answers with citations to those passages.
